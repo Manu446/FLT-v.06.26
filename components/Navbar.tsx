@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { assetPath } from "@/lib/assetPath";
 
 const links = [
   { href: "/", label: "Home" },
@@ -36,7 +37,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <motion.img
-            src="/logo.png"
+            src={assetPath("/logo.png")}
             alt="Future Life Tabernacle"
             className="h-10 w-auto"
             whileHover={{ rotate: [0, -5, 5, 0], scale: 1.05 }}

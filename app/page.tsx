@@ -5,6 +5,7 @@ import ClientLayout from '@/components/ClientLayout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import ParallaxHeroBackground from '@/components/ParallaxHeroBackground';
+import { assetPath } from '@/lib/assetPath';
 import {
   ArrowDown,
   Play,
@@ -225,7 +226,7 @@ function HomeContent() {
             <ScrollReveal direction="left" variant="scale">
               <div className="relative rounded-3xl overflow-hidden shadow-xl group">
                 <motion.img
-                  src="/pics/004.JPG"
+                  src={assetPath("/pics/004.JPG")}
                   alt="Church History"
                   className="w-full h-[400px] object-cover"
                   whileHover={{ scale: 1.06 }}
@@ -506,7 +507,7 @@ function HomeContent() {
                 <TiltCard>
                   <div className="glass-card flex gap-5 items-start card-glow">
                     <motion.img
-                      src={t.img}
+                      src={assetPath(t.img)}
                       alt={t.author}
                       className="w-20 h-20 rounded-2xl object-cover flex-shrink-0 shadow-md"
                       whileHover={{ scale: 1.08 }}

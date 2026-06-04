@@ -12,6 +12,7 @@ import MagneticButton from '@/components/MagneticButton';
 import SplitText from '@/components/SplitText';
 import PageCTA from '@/components/PageCTA';
 import { Calendar, Users, BookOpen, Clock, MapPin, Ticket, Sparkles } from 'lucide-react';
+import { assetPath } from '@/lib/assetPath';
 
 const upcoming = [
   { date: 'August 10, 2025', time: '7:00 PM', title: 'Worship Night', desc: 'A powerful evening of praise, prophecy, and open heaven. Come expecting an encounter with God\'s presence.', location: 'Main Sanctuary', spots: 'Open to all' },
@@ -198,7 +199,7 @@ function EventsContent() {
               <StaggerItem key={item.title}>
                 <div className="group relative rounded-3xl overflow-hidden h-80 border border-black/[0.06]">
                   <motion.img
-                    src={item.img}
+                    src={assetPath(item.img)}
                     alt={item.title}
                     className="w-full h-full object-cover"
                     whileHover={{ scale: 1.1 }}

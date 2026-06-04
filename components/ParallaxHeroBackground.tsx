@@ -8,8 +8,9 @@ import {
   useScroll,
   useTransform,
 } from 'framer-motion';
+import { assetPath } from '@/lib/assetPath';
 
-const HERO_IMAGE = '/images/hero-church.png';
+const HERO_IMAGE = assetPath('/images/hero-church.png');
 
 type ParallaxHeroBackgroundProps = {
   sectionRef: RefObject<HTMLElement | null>;

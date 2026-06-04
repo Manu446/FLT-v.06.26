@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { assetPath } from "@/lib/assetPath";
 
 export const metadata: Metadata = {
   title: "Future Life Tabernacle | Transforming Lives Worldwide",
@@ -13,9 +14,9 @@ export const metadata: Metadata = {
     locale: "en_US",
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/logo.png',
+    icon: assetPath('/favicon.ico'),
+    shortcut: assetPath('/favicon.ico'),
+    apple: assetPath('/logo.png'),
   },
 };
 

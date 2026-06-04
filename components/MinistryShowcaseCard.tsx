@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { assetPath } from '@/lib/assetPath';
 
 type MinistryShowcaseCardProps = {
   img: string;
@@ -22,7 +23,7 @@ export default function MinistryShowcaseCard({
   return (
     <Link href={href} className="group block relative rounded-3xl overflow-hidden h-[420px] border border-black/[0.06]">
       <motion.img
-        src={img}
+        src={assetPath(img)}
         alt={title}
         className="w-full h-full object-cover"
         whileHover={{ scale: 1.12 }}

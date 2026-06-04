@@ -1,5 +1,7 @@
 'use client';
 
+import { assetPath } from '@/lib/assetPath';
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -26,7 +28,7 @@ export default function PageLoader() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <img src="/logo.png" alt="Future Life Tabernacle logo" className="mx-auto mb-4 h-20 w-auto" />
+            <img src={assetPath("/logo.png")} alt="Future Life Tabernacle logo" className="mx-auto mb-4 h-20 w-auto" />
             <h1 className="font-display text-3xl md:text-4xl text-gold mb-6">Future Life Tabernacle</h1>
             <div className="w-48 h-0.5 bg-black/5 rounded-full overflow-hidden mx-auto">
               <motion.div

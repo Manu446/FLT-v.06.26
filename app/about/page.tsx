@@ -12,6 +12,7 @@ import Counter from '@/components/Counter';
 import SplitText from '@/components/SplitText';
 import PageCTA from '@/components/PageCTA';
 import MagneticButton from '@/components/MagneticButton';
+import { assetPath } from '@/lib/assetPath';
 import { Facebook, Instagram, Youtube, Church, HandHeart, Users, Globe2 } from 'lucide-react';
 
 const leaders = [
@@ -93,7 +94,7 @@ function AboutContent() {
             <ScrollReveal direction="left" variant="scale">
               <div className="relative rounded-3xl overflow-hidden shadow-xl group">
                 <motion.img
-                  src="/pics/004.JPG"
+                  src={assetPath("/pics/004.JPG")}
                   alt="Our History"
                   className="w-full h-[450px] object-cover"
                   whileHover={{ scale: 1.05 }}
@@ -156,7 +157,7 @@ function AboutContent() {
             <ScrollReveal direction="right" className="order-1 lg:order-2" variant="scale">
               <div className="relative rounded-3xl overflow-hidden shadow-xl group">
                 <motion.img
-                  src="/pics/009.JPG"
+                  src={assetPath("/pics/009.JPG")}
                   alt="Mission and Vision"
                   className="w-full h-[450px] object-cover"
                   whileHover={{ scale: 1.05 }}
@@ -263,7 +264,7 @@ function AboutContent() {
                   <div className="glass-card text-center card-glow h-full">
                     <div className="relative inline-block mb-4">
                       <motion.img
-                        src={leader.img}
+                        src={assetPath(leader.img)}
                         alt={leader.name}
                         className="w-36 h-36 rounded-full object-cover border-[3px] border-gold shadow-md"
                         whileHover={{ scale: 1.05 }}

@@ -12,6 +12,7 @@ import SplitText from '@/components/SplitText';
 import TiltCard from '@/components/TiltCard';
 import PageCTA from '@/components/PageCTA';
 import { Users, Heart, Shield, Baby, Music, Globe, ClipboardList, Handshake, Sparkles } from 'lucide-react';
+import { assetPath } from '@/lib/assetPath';
 
 const ministries = [
   {
@@ -130,7 +131,7 @@ function MinistriesContent() {
                 <TiltCard>
                   <div className="group relative rounded-3xl overflow-hidden h-[520px] border border-black/[0.06] bg-white">
                     <motion.img
-                      src={m.img}
+                      src={assetPath(m.img)}
                       alt={m.title}
                       className="w-full h-full object-cover"
                       whileHover={{ scale: 1.1 }}
@@ -200,7 +201,7 @@ function MinistriesContent() {
             <ScrollReveal direction="left" variant="scale">
               <div className="rounded-3xl overflow-hidden shadow-xl">
                 <motion.img
-                  src="/pics/073.JPG"
+                  src={assetPath("/pics/073.JPG")}
                   alt="Serving together"
                   className="w-full h-[380px] object-cover"
                   whileHover={{ scale: 1.04 }}

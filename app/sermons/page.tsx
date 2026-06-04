@@ -12,6 +12,7 @@ import TiltCard from '@/components/TiltCard';
 import SplitText from '@/components/SplitText';
 import PageCTA from '@/components/PageCTA';
 import { Youtube, Apple, Music, BookOpen, Download, Headphones, Play, Radio } from 'lucide-react';
+import { assetPath } from '@/lib/assetPath';
 
 const archive = [
   { img: '/pics/sermon1.jpg', title: 'Overcoming Fear', speaker: 'Pastor Jane Doe', date: 'Feb 25, 2025', scripture: '2 Timothy 1:7', duration: '45 min', topic: 'Faith' },
@@ -139,7 +140,7 @@ function SermonsContent() {
                   <div className="glass-card card-glow h-full">
                     <div className="rounded-2xl overflow-hidden mb-4 relative group">
                       <motion.img
-                        src={s.img}
+                        src={assetPath(s.img)}
                         alt={s.title}
                         className="w-full h-52 object-cover"
                         whileHover={{ scale: 1.05 }}

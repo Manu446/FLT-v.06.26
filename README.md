@@ -46,6 +46,18 @@ npm run build
 
 The static export will be generated in the `out` folder.
 
+## Deploy on GitHub Pages
+
+This repo deploys automatically to GitHub Pages on every push to `main`.
+
+1. Open [FLT-v.06.26 Settings → Pages](https://github.com/Manu446/FLT-v.06.26/settings/pages)
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+3. Push to `main` (or run the **Deploy to GitHub Pages** workflow manually)
+
+**Live URL:** https://manu446.github.io/FLT-v.06.26/
+
+Local dev uses no base path; production builds set `GITHUB_PAGES=true` for the correct asset paths.
+
 ## Project Structure
 
 ```
